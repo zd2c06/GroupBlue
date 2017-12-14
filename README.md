@@ -1,6 +1,6 @@
 # GroupBlue
 
-zd2c08 a Okamoto
+zd2c08 a Oka
 大石裕司
 
 zd2C09

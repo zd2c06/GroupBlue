@@ -1,0 +1,943 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Droid+Serif");
+/*
+-------------------------------------------------------- */
+/* base
+-------------------------------------------------------- */
+body {
+    font-family:'游ゴシック体 Medium', 'Yu Gothic Medium', YuGothic Medium, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    color: #333333;
+    font-size: 100%;
+    line-height: 1.5;
+}
+a {
+    color: #333333;
+    text-decoration: none;
+}
+a:hover {
+    color: #999999;
+}
+ul {
+    list-style-type: none;
+}
+p {
+    margin: 20px 0;
+}
+input, textarea {
+    border: 1px solid #dddddd;
+}
+
+/*
+-------------------------------------------------------- */
+/* layout
+-------------------------------------------------------- */
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+.con-main {
+    overflow: hidden;
+}
+.main-contents-outer {
+    width: 73%;
+    float: right;
+}
+.side-contents-outer {
+    width: 24%;
+    float: left;
+    background-color: #d3e0eb;
+    padding-bottom: 32768px; /*sidebarをページの高さに伸ばす*/
+    margin-bottom: -32768px; /*sidebarをページの高さに伸ばす*/
+}
+
+/*
+-------------------------------------------------------- */
+/* gl-header
+-------------------------------------------------------- */
+.gl-header {
+    border-top: 5px solid #0068b7;
+    height: 75px;
+}
+.gl-header .container {
+    position: relative;
+}
+.logo {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    line-height: 3;
+}
+.tag-line {
+    font-size: 10px;
+    color: #666666;
+    display: block;
+    line-height: 1;
+    font-weight: bold;
+}
+.util-nav {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    overflow: hidden;
+}
+.util-nav li {
+    float: left;
+    font-size: 10px;
+    line-height: 1.2;
+    border-right: 1px solid #666666;
+    padding: 0 20px;
+}
+.util-nav li:last-child {
+    padding-right: 0;
+    border-right: none;
+}
+.doc-request {
+    position: absolute;
+    right: 0;
+    top: 34px;
+    margin: 0;
+}
+/*
+-------------------------------------------------------- */
+/* gl-nav
+-------------------------------------------------------- */
+.gl-nav {
+    margin-top: 75px;
+    height: 50px;
+    background: url("../images/gnav/base_btn.jpg") 0 0 repeat-x;
+}
+.gl-nav ul{
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+.gl-nav li {
+    text-indent: -9999px;
+    float: left;
+    width: 160px;
+    height: 50px;
+}
+.gl-nav a {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: block;
+    width: 160px;
+    height: 50px;
+}
+/*normal*/
+.gl-nav li:nth-child(1) a {
+    background-image: url("../images/gnav/btn01.jpg");
+}
+.gl-nav li:nth-child(2) a {
+    background-image: url("../images/gnav/btn02.jpg");
+}
+.gl-nav li:nth-child(3) a {
+    background-image: url("../images/gnav/btn03.jpg");
+}
+.gl-nav li:nth-child(4) a {
+    background-image: url("../images/gnav/btn04.jpg");
+}
+.gl-nav li:nth-child(5) a {
+    background-image: url("../images/gnav/btn05.jpg");
+}
+.gl-nav li:nth-child(6) a {
+    background-image: url("../images/gnav/btn06.jpg");
+}
+/*hover*/
+.gl-nav li:nth-child(1) a:hover {
+    background-image: url("../images/gnav/h/btn01.jpg");
+}
+.gl-nav li:nth-child(2) a:hover {
+    background-image: url("../images/gnav/h/btn02.jpg");
+}
+.gl-nav li:nth-child(3) a:hover {
+    background-image: url("../images/gnav/h/btn03.jpg");
+}
+.gl-nav li:nth-child(4) a:hover {
+    background-image: url("../images/gnav/h/btn04.jpg");
+}
+.gl-nav li:nth-child(5) a:hover {
+    background-image: url("../images/gnav/h/btn05.jpg");
+}
+.gl-nav li:nth-child(6) a:hover {
+    background-image: url("../images/gnav/h/btn06.jpg");
+}
+/*current*/
+.gl-nav li:nth-child(1) {
+    background-image: url("../images/gnav/c/btn01.jpg");
+}
+.gl-nav li:nth-child(2) {
+    background-image: url("../images/gnav/c/btn02.jpg");
+}
+.gl-nav li:nth-child(3) {
+    background-image: url("../images/gnav/c/btn03.jpg");
+}
+.gl-nav li:nth-child(4) {
+    background-image: url("../images/gnav/c/btn04.jpg");
+}
+.gl-nav li:nth-child(5) {
+    background-image: url("../images/gnav/c/btn05.jpg");
+}
+.gl-nav li:nth-child(6) {
+    background-image: url("../images/gnav/c/btn06.jpg");
+}
+/*
+-------------------------------------------------------- */
+/* hero
+-------------------------------------------------------- */
+.hero {
+    height: 345px;
+    background:
+        url("../images/cloud.jpg") center 0 no-repeat,
+        url("../images/back_main.jpg") 0 0 repeat-x;
+    padding-top: 20px;
+    margin-bottom: 30px;
+    margin-top: 55px;
+}
+.hero .main-img {
+    width: 960px;
+    height: 320px;
+    background: url("../images/mainimg.jpg") 0 0 no-repeat;
+    text-indent: -9999px;
+    margin: 0 auto;
+    position: relative;
+}
+.badge {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 230px;
+    height: 117px;
+    background: url("../images/badge.png") 0 0 no-repeat;
+}
+.bAppeal .hero,
+.bCourse .hero,
+.bPricelist .hero,
+.bMeetplace .hero,
+.bContact .hero {
+    height: 145px;
+    background: url("../images/cloud2.jpg") 50% 0 no-repeat,
+                url("../images/back2_main.jpg") 0 0 repeat-x;
+}
+.bAppeal .hero .main-img,
+.bCourse .hero .main-img,
+.bPricelist .hero .main-img,
+.bMeetplace .hero .main-img,
+.bContact .hero .main-img {
+    height: 120px;
+}
+.bAppeal .hero .main-img {
+    background: url("../images/title_appeal.jpg") 0 0 no-repeat;
+}
+.bCourse .hero .main-img {
+    background: url("../images/title_course.jpg") 0 0 no-repeat;
+}
+.bPricelist .hero .main-img {
+    background: url("../images/title_pricelist.jpg") 0 0 no-repeat;
+}
+.bMeetplace .hero .main-img {
+    background: url("../images/title_meetplace.jpg") 0 0 no-repeat;
+}
+.bContact .hero .main-img {
+    background: url("../images/title_contact.jpg") 0 0 no-repeat;
+}
+/*
+-------------------------------------------------------- */
+/* leader
+-------------------------------------------------------- */
+h2 {
+    font-size: 16px;
+    background:
+        url("../images/square.png") 20px center no-repeat,
+        url("../images/title_bg.png") 0 0 repeat-x;
+    height: 43px;
+    line-height: 2.7; /*文字を高さの中央に配置*/
+    border: 1px solid #dddddd;
+    padding-left: 43px;
+}
+
+
+/*
+-------------------------------------------------------- */
+/* side-nav
+-------------------------------------------------------- */
+.side-nav {
+    background-color: #ffffff;
+    margin: 10px;
+}
+.side-nav li {
+    background: url("../images/sub_dot.png") 0 bottom repeat-x;
+}
+.side-nav li:last-child {
+    background: none;
+}
+.side-nav a {
+    display: block;
+    font-weight: bold;
+    line-height: 1.2;
+    padding: 10px;
+}
+.side-nav a:hover {
+    background-color: #e9f0f5;
+}
+.side-nav-inner {
+    padding: 8px 20px 2px;
+    border-left: 5px solid #0068b7;
+    line-height: 1;
+    display: block;
+}
+.side-nav-inner .sub {
+    font-size: 9px;
+    color: #0068b7;
+    font-weight: bold;
+    vertical-align: 3px;
+}
+.side-nav-inner .sub::before {
+    content: "\A"; /*改行コードの追加*/
+    white-space: pre; /*HTMLのpre要素として扱う*/
+}
+/*
+-------------------------------------------------------- */
+/* company
+-------------------------------------------------------- */
+.company-info-inner {
+    border: 1px solid #dddddd;
+    padding: 20px 0 0 20px;
+    background: linear-gradient(to bottom, #ffffff 0%, #e9eff5 100%);
+}
+.company-info-inner h3 {
+    font-weight: bold;
+    margin-bottom: -12px;
+}
+.company-info-inner p {
+    font-size: 14px;
+}
+/*
+-------------------------------------------------------- */
+/* banner
+-------------------------------------------------------- */
+.topic-banner {
+    text-align: center;
+    padding: 10px;
+}
+.topic-banner img:first-child {
+    margin-bottom: 5px;
+}
+/*
+-------------------------------------------------------- */
+/* footer
+-------------------------------------------------------- */
+.gl-footer {
+    font-size: 12px;
+    background-color: #0068b7;
+    height: 150px;
+    color: #ffffff;
+}
+.gl-footer .container {
+    position: relative;
+    height: 150px;
+}
+.footer-nav {
+    position: absolute;
+    left: 0;
+    top:20px;
+}
+.footer-nav li {
+    float: left;
+    font-size: 10px;
+    line-height: 1.2;
+    border-right: 1px solid #ffffff;
+    padding: 0 20px;
+}
+.footer-nav li:first-child {
+    padding-left: 0;
+}
+.footer-nav li:last-child {
+    border: none;
+    padding-right: 0;
+}
+.footer-nav a {
+    color: #ffffff;
+}
+.copyright {
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+/*
+-------------------------------------------------------- */
+/* event/area/news 共通
+-------------------------------------------------------- */
+.event, .area, .news {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/*
+-------------------------------------------------------- */
+/* event
+-------------------------------------------------------- */
+.event-box {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    font-size: 12px;
+    padding: 15px 20px;
+    border: 1px solid #dddddd;
+    background: linear-gradient(to bottom, #ffffff 0%, #e9eff5 100%);
+
+}
+.event-box:nth-of-type(2) {
+    border-left-color: #ffffff;
+}
+.event-box a > img {
+    float: left;
+    margin-right: 20px;
+}
+/*
+-------------------------------------------------------- */
+/* area
+-------------------------------------------------------- */
+.area h2 {
+    margin-bottom: 15px;
+}
+.area h2 + img {
+    float: left;
+}
+.area h3 {
+    margin-left: 270px;
+    line-height: 2;
+    background: url("../images/news_dt.png") 0 bottom repeat-x;
+}
+.area p {
+    font-size: 14px;
+    margin-left: 270px;
+    margin-bottom: 0;
+}
+/*
+-------------------------------------------------------- */
+/* news
+-------------------------------------------------------- */
+.news h2 {
+    margin-bottom: 15px;
+}
+.news dt {
+    float: left;
+    width: 100px;
+    line-height: 44px;
+    font-size: 10px;
+}
+.news dd {
+    padding: 10px 0 10px 125px;
+    margin: 0;
+    background: url("../images/news_dt.png") 0 bottom repeat-x;
+}
+.news dd:before {
+    content: "INFO";
+    color: #ffffff;
+    font-size: 10px;
+    background-color: #0068b7;
+    padding: 1px 15px;
+    margin-right: 25px;
+}
+
+/*
+------------------------------------------------------- */
+/* appeal
+------------------------------------------------------- */
+.appeal-box {
+    padding: 50px 20px;
+    border-bottom: 1px dotted #dddddd;
+    position: relative;
+    overflow: hidden;
+}
+.appeal-box h3 {
+    color: #0068b7;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+.appeal-box h3 span {
+    font-size: 12px;
+}
+.appeal-box img {
+    width: 50%;
+    height: auto;
+    padding: 5px;
+    border: 1px solid #dddddd;
+}
+.appeal-box:nth-of-type(odd) img {
+    float: left;
+    margin-right: 40px;
+}
+.appeal-box:nth-of-type(even) img {
+    float: right;
+    margin-left: 40px;
+}
+.appeal-caption {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    background-color: #0068b7;
+    color: #ffffff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    padding-top: 40px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.appeal-box:nth-of-type(odd) .appeal-caption {
+    left:0;
+}
+.appeal-box:nth-of-type(3) .appeal-caption {
+    padding-top: 30px;
+}
+/*
+------------------------------------------------------- */
+/* course
+------------------------------------------------------- */
+.course .flex-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+.course-box {
+    border: solid 1px #dddddd;
+    padding: 10px 20px 30px;
+    background: linear-gradient(to bottom, #f9f9f9 0%, #dfdfdf 100%);
+    text-align: center;
+    width: 49%;
+    margin-bottom: 20px;
+    position: relative;
+}
+.course-box h3 {
+    border-bottom: 1px dotted #dddddd;
+    margin-bottom: 15px;
+}
+.course-box p {
+    font-size: 14px;
+    text-align: left;
+}
+.course-box img {
+    max-width: 87%;
+    height: auto;
+    margin: 0 auto;
+}
+.course-box dl {
+    font-size: 12px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+.course-box dt {
+    float: left;
+    width: 5em;
+    padding: 2px 5px;
+    background-color: #666666;
+    color: #ffffff;
+    margin: 0 0 2px 0;
+}
+.course-box dd {
+    padding: 2px 0 2px 6em;
+    text-align: left;
+    margin: 0 0 2px 0;
+}
+.course-box .batch {
+    position: absolute;
+    color: #ef4721;
+    right: 50px;
+    bottom: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+.course-box .batch-title,
+.course-box .tani {
+    line-height: 1.2;
+    display: block;
+    font-size: 12px;
+}
+.course-box .batch-time {
+    font-size: 36px;
+    line-height: 1;
+    font-family: 'Droid Serif', serif;
+    display: block;
+}
+.course-box .btn {
+    font-size: 14px;
+    background-color: #0068b7;
+    border: 1px solid #dddddd;
+    color: #ffffff;
+    text-shadow: 0px 0px 1px #aaaaaa;
+    width: 100px;
+    padding: 10px;
+}
+.course-box .btn:hover {
+    background-color: #349ceb;
+}
+
+
+/*
+------------------------------------------------------- */
+/* price-list
+------------------------------------------------------- */
+.price-list table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    table-layout: fixed;
+    margin-bottom: 20px;
+}
+.price-list th, .price-list td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+.price-list th {
+    background-color: #0068b7;
+    color: #ffffff;
+}
+
+/*
+------------------------------------------------------- */
+/* meet-place
+------------------------------------------------------- */
+.movie-map {
+    text-align: center;
+}
+.movie-map h3 {
+    font-weight: normal;
+    text-align: left;
+}
+.movie-map p {
+    text-align: left;
+}
+.movie-map iframe {
+    margin-bottom: 20px;
+}
+.movie-map p:last-child {
+    border-top: 1px dotted #dddddd;
+    padding-top: 10px;
+    font-size: 14px;
+}
+.movie-map h3 i {
+    vertical-align: baseline;
+    margin-right: 8px;
+}
+
+/*
+------------------------------------------------------- */
+/* contact
+------------------------------------------------------- */
+.contact .required {
+    color: #0068b7;
+    font-size: 12px;
+}
+.contact form {
+    padding: 0 20px;
+}
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #dddddd;
+}
+.contact input:focus,
+.contact textarea:focus {
+    box-shadow: 0px 0px 2px #333333;
+}
+.contact textarea {
+    height: 80px;
+}
+.contact label span {
+    color: #0068b7;
+}
+.contact input[type="submit"] {
+    background-color: #0068b7;
+    color: #ffffff;
+    width: 150px;
+    height: 40px;
+    transition: all .5s;
+}
+.contact input[type="submit"]:hover {
+    background-color: #349ceb;
+}
+
+/*
+-------------------------------------------------------- */
+/* tablet
+------------------------------------------------------- */
+@media (max-width: 768px) {
+/*
+-------------------------------------------------------- */
+/* layout
+-------------------------------------------------------- */
+    .container {
+        width: 100%;
+    }
+    .main-contents-outer {
+        width: 98%;
+        float: none;
+        margin: 0 auto 20px;
+    }
+    .side-contents-outer {
+        width: 100%;
+        float: none;
+        padding-top: 5px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .leader p {
+        padding: 0 10px;
+    }
+    /*
+    -------------------------------------------------------- */
+    /* gl-header
+    -------------------------------------------------------- */
+    .logo {
+        left: 10px;
+    }
+    .util-nav,
+    .doc-request{
+        right: 10px;
+    }
+    /*
+    -------------------------------------------------------- */
+    /* gl-nav
+    -------------------------------------------------------- */
+    .gl-nav {
+        height: 40px;
+        background-size: contain;
+    }
+    .gl-nav ul{
+        width: 100%;
+    }
+    .gl-nav li {
+        width: 16.6%;
+        height: 40px;
+        border-right: 1px solid #dddddd;
+        background-position: center center;
+        background-size: cover;
+    }
+    .gl-nav li:last-child {
+        border-right: none;
+    }
+    .gl-nav a {
+        width: 100%;
+        height: 40px;
+        background-position: center center;
+        background-size: cover;
+    }
+    /*
+    -------------------------------------------------------- */
+    /* hero
+    -------------------------------------------------------- */
+    .hero,
+    .bAppeal .hero,
+    .bCourse .hero,
+    .bPricelist .hero,
+    .bMeetplace .hero,
+    .bContact .hero {
+        height: auto;
+        background: none;
+        padding-top: 0;
+        margin-top: 45px;
+        margin-bottom: 10px;
+    }
+    .hero .main-img {
+        width: 100%;
+        height: 0;
+        padding-top: 31.2%; /* 高さを幅の31.2%に固定 */
+        background-size: contain;
+    }
+    .bAppeal .hero .main-img,
+    .bCourse .hero .main-img,
+    .bPricelist .hero .main-img,
+    .bMeetplace .hero .main-img,
+    .bContact .hero .main-img {
+        width: 100%;
+        height: 0;
+        padding-top: 13%; /* 高さを幅の13%に固定 */
+        background-size: cover;
+        background-position: right center;
+    }
+    .badge {
+        display: none;
+    }
+    /*
+    -------------------------------------------------------- */
+    /* footer
+    -------------------------------------------------------- */
+    .gl-footer .container {
+        height: 70px;
+        padding-top: 10px;
+        text-align: center;
+    }
+    .footer-nav {
+        position: static;
+        margin-bottom: 10px;
+    }
+    .footer-nav li {
+        float: none;
+        display: inline;
+    }
+    .copyright {
+        position: static;
+        display: block;
+    }
+    /*
+    -------------------------------------------------------- */
+    /* top page
+    -------------------------------------------------------- */
+    .area h3 img {
+        max-width: 100%;
+    }
+    .news dt {
+        padding-left: 10px;
+    }
+    .news dd {
+        padding-left: 7em;
+    }
+    /*
+    ------------------------------------------------------- */
+    /* meet-place
+    ------------------------------------------------------- */
+    .movie-map h3,
+    .movie-map p {
+        padding: 0 10px;
+    }
+    /*
+    ------------------------------------------------------- */
+    /* contact
+    ------------------------------------------------------- */
+    .contact .required {
+        padding-left: 10px;
+    }
+}
+
+/*
+-------------------------------------------------------- */
+/* smartphone
+------------------------------------------------------- */
+@media (max-width: 479px) {
+/*
+-------------------------------------------------------- */
+/* layout
+-------------------------------------------------------- */
+    .main-contents-outer {
+        margin-top: 100px;
+    }
+    /*
+    -------------------------------------------------------- */
+    /* gl-header
+    -------------------------------------------------------- */
+    .util-nav,
+    .doc-request{
+        display: none;
+    }
+    /*
+    -------------------------------------------------------- */
+    /* gl-nav
+    -------------------------------------------------------- */
+    .gl-nav {
+        height: 80px;
+    }
+    .gl-nav li {
+        width: 33.3%;
+    }
+    .gl-nav li:nth-of-type(4) {
+        clear: left;
+    }
+    /*
+    -------------------------------------------------------- */
+    /* hero
+    -------------------------------------------------------- */
+    .hero {
+        display: none;
+    }
+    /*
+    -------------------------------------------------------- */
+    /* leader
+    -------------------------------------------------------- */
+    h2 {
+        background-position: 10px center;
+        padding-left: 30px;
+    }
+    /*
+    -------------------------------------------------------- */
+    /* top page
+    -------------------------------------------------------- */
+    .event-box {
+        float: none;
+        width: 100%;
+        padding: 20px 10px;
+    }
+    .event-box p {
+        margin-bottom: 0;
+    }
+    .area h2 + img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+    }
+    .area h3,
+    .area p {
+        padding: 0 10px;
+        margin-left: 0px;
+    }
+    .news dt {
+        float: none;
+        line-height: 3em;
+        padding-left: 10px;
+    }
+    .news dd {
+        padding-top: 0;
+        padding-left: 10px;
+    }
+    .news dd:before {
+        display: block;
+        width: 6em;
+        margin-bottom: 5px;
+    }
+    /*
+    ------------------------------------------------------- */
+    /* appeal
+    ------------------------------------------------------- */
+    .appeal-box {
+        padding: 20px;
+    }
+    .appeal-box img {
+        float: none;
+        width: 100%;
+        margin: 0 auto 15px;
+        box-sizing: border-box;
+    }
+    .appeal-caption {
+        display: none;
+    }
+    /*
+    ------------------------------------------------------- */
+    /* course
+    ------------------------------------------------------- */
+    .course-box {
+        float: none;
+        width: 100%;
+    }
+    /*
+    ------------------------------------------------------- */
+    /* meet-place
+    ------------------------------------------------------- */
+    .embed-wrapper {
+        width: 100%;
+        padding-bottom: 56.25%;/*calc(315/560*100) 画面が16:9*/
+        margin-bottom: 10px;
+        position: relative;
+    }
+    .embed-wrapper iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
